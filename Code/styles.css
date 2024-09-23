@@ -6,8 +6,8 @@ body {
 
 .navbar {
     height: auto;
-    background-color: #FA5C1E;
-    color: white;
+    background-color: #E71D36;
+    color: #EBFCFB;
     display: flex;
     font-family: 'Lekton', sans-serif;
     padding: 0.5%;
@@ -65,19 +65,20 @@ body {
     flex-direction: column;
     align-items: flex-start;
     font-family: 'Lekton', sans-serif;
-    color: white;
+    color: #EBFCFB;
 }
 
 .profile_picture {
     border: 1px solid;
-    border-color: #FA5C1E;
+    border-color: #E71D36;
 }
 
 .projects {
     text-align: center;
-    margin: 5% 10% 5% 10%;
+    margin-top: 3%;
     font-family: 'Lekton', sans-serif;
     color: white;
+    
 }
 
 .project_container {
@@ -91,26 +92,58 @@ body {
 .project_item {
     display: block;
     background-color: #3c3253;
-    width: 25%;
+    width: 22%;
     margin: 2%;
     border: 1px solid;
-    border-color: #FA5C1E;
+    border-color: #E71D36;
     border-radius: 2%;
     padding-bottom: 1%;
 }
 
 .project_img {
-    width: 85%;
-    height: 65%;
+    width: 270px;
+    height: 170px;
     margin-top: 7%; 
 }
 
 .project_button {
-    background-color: #534573;
-    border-radius: 3%;
+    background-color: #E71D36;
+    border-radius: 5px;
     font-family: 'Lekton', sans-serif;
     color: white;
-    width: fit-content;
-    height: fit-content;
-    border-color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 15px 30px;
+    font-size: 20px;
 }
+
+.project_button:hover {
+    background-color: #EBFCFB;
+    color: #251F33;
+}
+
+.socials {
+    padding-top: 15%;
+    padding-right: 15%;
+    padding-left: 5%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup.active {
+    display: block;
+}
+

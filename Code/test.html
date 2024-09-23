@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width" />
+ <title>Exoplanet Exploration</title>
+ <link rel="stylesheet" href="/styles2.css">
+</head>
+
+<body>
+ <div class="container">
+   <header class="header">
+       <h1 class="title">Exoplanet Exploration</h1>
+   <!-- A beautiful moving background image of space can be added here using a video -->
+   </header>
+   <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Discovery</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="main-content">
+      <div class="section-title">
+        <h2>Unveiling the Mysteries of Exoplanets</h2>
+        <p>Welcome to the fascinating world of exoplanets, planets beyond our solar system. 
+         Explore the wonders they hold and discover the potential for life beyond our home.</p>
+      </div>
+      <div class="planet-cards">
+        <!-- You can add more exoplanet cards here using cards like the one below -->
+        <div class="planet-card">
+          <img src="planet_image.png" alt="Exoplanet" />
+          <h3>Kepler-452b</h3>
+          <p>Distance: 1,400 Light-Years</p>
+          <p>Potential for Life: This super-Earth orbits within the habitable zone and has a rocky surface, making it a prime candidate for liquid water.</p>
+        </div>
+        
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    <p>© 2023 Exoplanet Exploration. All rights reserved.</p>
+  </footer>
+</body>
+</html> 
+
+<style>
+
+/* reset styles to remove default browser styles */
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+   font-family: Arial, sans-serif;
+   line-height: 1.8;
+   color: #fff;
+   background-color: #0f0f0f; /* fallback dark black */
+   background-color: var(--bg-color);
+  }
+
+  /* variables for primary colors */
+  :root {
+   --bg-color: #0f0f0f;
+   --primary-color: #e9c46a;
+   --secondary-color: #faf0e6;
+  }
+
+  .container {
+   max-width: 1200;
+   margin: 0 auto;
+   padding: 0 1rem;
+  }
+
+  /* Header styles */
+  .header {
+   text-align: center;
+   padding: 4rem 0;
+   background-color: black;
+   background-image: url('background_image.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: gold;
+  }
+
+  .title {
+   font-size: 3rem;
+   line-height: 1.2;
+   color: var(--primary-color);
+   text-shadow: 2px 2px 0 #000;
+  }
+  /* Navigation styles */
+  nav {
+   background-color: var(--secondary-color);
+   padding: 14px  30px;
+  }
+
+  .nav-links {
+   list-style: none;
+   display: flex;
+   padding: 0;
+   margin: 0;
+  }
+
+  .nav-links li {
+   padding: 0 10px;
+   }
+
+  .nav-links a {
+   color: #000;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 0.9rem;
+   text-transform: uppercase;
+   }
+
+  .nav-links a:hover {
+   color: var(--primary-color);
+  }
+
+  /* Main content styles */
+  .main-content {
+   margin-top: 50px;
+  }
+
+  .section-title {
+   text-align: center;
+   margin-bottom: 30px;
+   }
+
+  .section-title h2 {
+   color: var(--primary-color);
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+  }
+  .planet-cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+  }
+
+  .planet-card {
+   margin: 10px;
+   padding: 1rem;
+   flex: 1 1 250px;
+   background-color: #333;
+   color: #fff;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .planet-card img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+   border-radius: 5px;
+   margin-bottom: 10px;
+  }
+
+  .planet-card h3 {
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+  }
+
+  .planet-card p {
+   font-size: 1rem;
+   line-height: 1.4;
+   color: #ccc;
+   }
+
+  /* Footer styles */
+  footer {
+   background-color: var(--secondary-color);
+   color: #fff;
+   font-size: 0.9rem;
+   text-align: center;
+   padding: 20px;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+  }
+
+  /* Responsive styles */
+ @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+   }
+
+  .nav-links li {
+    padding: 10px;
+   }
+  .title {
+    font-size: 2rem;
+  }
+  .planet-card {
+    flex: 1 1 45%;
+    }
+ }
+  </style>
+  
+ 
+  Note that this is a basic example to get you started. You can further improve the website by adding more images, animations, and interactive elements to make it more engaging and informative about exoplanets. Also, consider using a proper web framework and server-side technology for building a robust and dynamic website.
+ 
+ 
+ This HTML code with the embedded CSS creates a simple yet appealing homepage for an exoplanet exploration website. The page has a black background with gold accents, including the title, navigation links, and some text. It includes a header section for a captivating introduction, a navigation bar, and a main content section featuring information about exoplanets. The styles are implemented directly into the HTML file for simplicity, but in a larger project, it's best to separate CSS into an external file.

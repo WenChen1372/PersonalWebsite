@@ -12,7 +12,7 @@
     <body>
         <nav class="navbar">
             <u1 class="list">
-                <img src="w.png" class="logo">
+                <img src="pictures/w.png" class="logo">
                 <li><a class="list_item">Wen Chen</a></li>
             </u1>
             <ul class="list">
@@ -22,19 +22,28 @@
                 <li><a class="list_item">Contact</a></li>
             </ul>
         </nav>
-
         <div class="profile">
             <div class = "profile_container">
-                <img src="wen.jpg" height="600" class="profile_picture">
+                <img src="pictures/wen.jpg" height="600" class="profile_picture">
+                <div class = "list">
+                    <a href="https://www.linkedin.com/in/wen-chen-b2338ba5/" class="socials" target="_blank">
+                        <img src="pictures\linkedin.png">
+                    </a>
+                    <a href="https://github.com/WenChen1372" class="socials" target="_blank">
+                        <img src="pictures/github.png">
+                    </a>
+                </div>
             </div>
             <article class="about_me">
                 <h1 class="section-title">About Me</h1>
                 <p>
-                    Hi my name is Wen! I'm a senior studying
+                    Hi my name is Wen! I graduated from the 
                     <br>
-                    computer Science and Data Science at the
+                    University of California, Berkeley in 
                     <br>
-                    University of California, Berkeley.
+                    2024 with a bachelors of Art in Data Science
+                    <br>
+                    and Computer Science.
                 <p>
                 <p>
                     I enjoy coding and learning about 
@@ -44,9 +53,11 @@
                     my creativity in solving problems.
                 <p>
                 <p>
-                    Some of my hobbies are watching football
+                    Some of my hobbies include watching football 
                     <br>
-                    with the Seattle Seahawks being my favorite
+                    and basketball with my favorite teams being
+                    <br>
+                    the Seattle Seahawks and Los Angeles Lakers.
                     <br>
                     team. In my free time I mostly watch anime 
                     <br>
@@ -59,27 +70,49 @@
             <h1 class="section-title">Projects</h1>
             <div class="project_container">
                 <div class="project_item">
-                    <img src="lezoom.png" class="project_img"> 
+                    <img src="pictures/idol.PNG" class="project_img"> 
+                    <h2>Idol-K-Katcher</h2> 
+                    <button class="project_button" onclick="openPopup()">More Info</button>
+
+                    <div id="popup1" class="popup">
+                        <p>This is the popup content!</p>
+                        <button onclick="closePopup()">Close</button>
+                    </div>
+
+                </div>
+                <div class="project_item">
+                    <img src="pictures/titanic.jpg" class="project_img"> 
+                    <h2>Titanic Kaggle</h2>
+                    <button class="project_button">More Info</button>
+                </div>
+                <div class="project_item">
+                    <img src="pictures/gitlet.PNG" class="project_img"> 
+                    <h2>Gitlet</h2>
+                    <button class="project_button">More Info</button>
+                </div>
+                <div class="project_item">
+                    <img src="pictures/lezoom.png" class="project_img"> 
                     <h2>LeZoom</h2>
                     <button class="project_button">More Info</button>
                 </div>
                 <div class="project_item">
-                    <img src="lezoom.png" class="project_img"> 
+                    <img src="pictures/movies.jpg" class="project_img"> 
+                    <h2>Movies Reasearch</h2>
+                    <button class="project_button">More Info</button>
+                </div>
+                <div class="project_item">
+                    <img src="pictures/nlppel.jpg" class="project_img"> 
+                    <h2>Speech Analysis(NLP)</h2>
+                    <button class="project_button">More Info</button>
+                </div>
+                <div class="project_item">
+                    <img src="pictures/LeFinance.PNG" class="project_img"> 
                     <h2>LeFinance</h2>
-                    <button class="project_button">More Info</button>
-                </div>
-                <div class="project_item">
-                    <img src="lezoom.png" class="project_img"> 
-                    <h2>Idol-Katchers</h2>
-                    <button class="project_button">More Info</button>
-                </div>
-                <div class="project_item">
-                    <img src="lezoom.png" class="project_img"> 
-                    <h2>Gitlet</h2>
                     <button class="project_button">More Info</button>
                 </div>
             </div>
         </div>
 
-    </body>  
+        <script src="script.js"></script>
+    </body>
 </html>  
