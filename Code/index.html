@@ -6,10 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap">
-        <title>Class Example</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        <title>Wen's Website</title>
     </head>
 
     <body>
+        <div id="vanta"">
+            <div class="typewriter">
+                <h1>Welcome to my world.</h1>
+              </div>
+        </div>
         <nav class="navbar">
             <u1 class="list">
                 <img src="pictures/w.png" class="logo">
@@ -22,19 +28,19 @@
                 <li><a class="list_item">Contact</a></li>
             </ul>
         </nav>
+        <script>
+            window.addEventListener("scroll", function () {
+                const navbar = document.querySelector(".navbar");
+                const landingHeight = window.innerHeight; // Get 100vh height
+                if (window.scrollY + 80 > landingHeight) {
+                    navbar.classList.add("solid-background");
+                } else {
+                    navbar.classList.remove("solid-background");
+                }
+            });
+        </script>
         <div class="profile">
-            <div class = "profile_container">
-                <img src="pictures/wen.jpg" height="600" class="profile_picture">
-                <div class = "list">
-                    <a href="https://www.linkedin.com/in/wen-chen-b2338ba5/" class="socials" target="_blank">
-                        <img src="pictures\linkedin.png">
-                    </a>
-                    <a href="https://github.com/WenChen1372" class="socials" target="_blank">
-                        <img src="pictures/github.png">
-                    </a>
-                </div>
-            </div>
-            <article class="about_me">
+            <article class="about_me" data-aos="fade-right">
                 <h1 class="section-title">About Me</h1>
                 <p>
                     Hi my name is Wen! I graduated from the 
@@ -64,55 +70,161 @@
                     or play games.
                 <p>     
             </article>
+            <div class = "profile_container" data-aos="fade-left">
+                <img src="pictures/wen.jpg" class="profile_picture">
+                <div class = "list">
+                </div>
+            </div>
         </div>
+
+        <div class="resume_container">
+            <section class="resume">
+                <h2>My Resume</h2>
+                <div class="resume-content">
+                  <h3>Wenbiao Chen</h3>
+                  <p>Email: wen@example.com | Phone: (123) 456-7890</p>
+              
+                  <h4>Education</h4>
+                  <p>B.A. in Applied Mathematics & Data Science - UC Berkeley, 2024</p>
+              
+                  <h4>Experience</h4>
+                  <p>Software Developer - Example Company, 2023</p>
+              
+                  <h4>Skills</h4>
+                  <ul>
+                    <li>JavaScript, Python, SQL</li>
+                    <li>Data Analysis, Machine Learning</li>
+                  </ul>
+                </div>
+              </section>
+
+        </div>
+        
         
         <div class="projects"> 
             <h1 class="section-title">Projects</h1>
             <div class="project_container">
                 <div class="project_item">
                     <img src="pictures/idol.PNG" class="project_img"> 
-                    <h2>Idol-K-Katcher</h2> 
-                    <button class="project_button" onclick="openPopup()">More Info</button>
+                    <h2>Idol K-atcher</h2> 
+                    <button class="project_button" onclick="openPopup('popup1')">More Info</button>
 
                     <div id="popup1" class="popup">
-                        <p>This is the popup content!</p>
-                        <button onclick="closePopup()">Close</button>
+                        <div id="popup-body"> 
+                            <h1>Project:
+                                <span style="font-weight: normal;">Idol K-atcher</span>
+                            </h1>
+                            <h1>Description:
+                                <span style="font-weight: normal;">Idol K-atcher</span>
+                            </h1>
+                            <h1>Project Tools:
+                                <span style="font-weight: normal;">C#, Unity</span>
+                            </h1>
+                            <h1>Github: <a href="https://github.com/WenChen1372/Idol-K-Katcher" target="_blank" style="color: #C9A65E;">https://github.com/WenChen1372/Idol-K-Katcher</a></h1>
+                            <h1>Video: </h1>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/s3F7AqoiNa8?si=yGpkMMfYJ1Qk5F6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            
+                        </div>
+                        <div class="popbutton"> 
+                            <button onclick="closePopup('popup1')">Close</button>
+                        </div>
                     </div>
 
                 </div>
                 <div class="project_item">
                     <img src="pictures/titanic.jpg" class="project_img"> 
                     <h2>Titanic Kaggle</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup2')">More Info</button>
+
+                    <div id="popup2" class="popup">
+                        <p>This is the popup content 2!</p>
+                        <button onclick="closePopup('popup2')">Close</button>
+                    </div>
                 </div>
                 <div class="project_item">
                     <img src="pictures/gitlet.PNG" class="project_img"> 
                     <h2>Gitlet</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup3')">More Info</button>
+
+                    <div id="popup3" class="popup">
+                        <p>This is the popup content 3!</p>
+                        <button onclick="closePopup('popup3')">Close</button>
+                    </div>
                 </div>
                 <div class="project_item">
                     <img src="pictures/lezoom.png" class="project_img"> 
                     <h2>LeZoom</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup4')">More Info</button>
+
+                    <div id="popup4" class="popup">
+                        <p>This is the popup content!</p>
+                        <button onclick="closePopup('popup4')">Close</button>
+                    </div>
                 </div>
                 <div class="project_item">
                     <img src="pictures/movies.jpg" class="project_img"> 
                     <h2>Movies Reasearch</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup5')">More Info</button>
+
+                    <div id="popup5" class="popup">
+                        <p>This is the popup content!</p>
+                        <button onclick="closePopup('popup5')">Close</button>
+                    </div>
                 </div>
                 <div class="project_item">
                     <img src="pictures/nlppel.jpg" class="project_img"> 
                     <h2>Speech Analysis(NLP)</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup6')">More Info</button>
+
+                    <div id="popup6" class="popup">
+                        <p>This is the popup content!</p>
+                        <button onclick="closePopup('popup6')">Close</button>
+                    </div>
                 </div>
                 <div class="project_item">
-                    <img src="pictures/LeFinance.PNG" class="project_img"> 
+                    <img src="pictures/LeFinance.PNG" class="project_img">
                     <h2>LeFinance</h2>
-                    <button class="project_button">More Info</button>
+                    <button class="project_button" onclick="openPopup('popup7')">More Info</button>
+                    <div id="popup7" class="popup">
+                        <p>This is the popup content!</p>
+                        <button onclick="closePopup('popup7')">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="script.js"></script>
+
+        <script src="three.r134.min.js"></script>
+        <script src="vanta.fog.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.cells.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            VANTA.CELLS({
+                el: "#vanta",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                color1: "#000000", // Explicit black
+                color2: "#9B9898"  // Light gray
+            });
+        </script>
+        <script>
+            // Initialize AOS
+            AOS.init({
+                offset: 160, // Offset from the original trigger point (default: 120px)
+                delay: 0,    // Delay in milliseconds (default: 0)
+                duration: 400, // Animation duration in milliseconds (default: 400)
+                easing: 'ease', // Easing function (default: 'ease')
+                once: false
+                
+                 // Whether animation should happen only once (default: false)
+            });
+        </script>
     </body>
 </html>  
