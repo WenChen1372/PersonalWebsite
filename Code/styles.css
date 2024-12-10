@@ -242,7 +242,32 @@ body {
     margin: auto;
     font-family: 'Lekton', sans-serif;
     color: #EBFCFB;
-    background-color: #C9A65E;
+    background-color: #1E1D1D;
+    border: 1px solid;
+    border-color: #EBFCFB;
+    position: relative; 
+}
+
+.contact {
+    font-size: 14px;
+}
+
+.download-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 10px 10px;
+    background-color: #0056b3;
+    color: #EBFCFB;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lekton', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #004494;
 }
   
 .resume h2, .resume h3, .resume h4 {
