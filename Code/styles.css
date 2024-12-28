@@ -139,29 +139,32 @@ body {
     font-family: 'Lekton', sans-serif;
     color: white;
     background: linear-gradient(0deg, rgba(48,40,25,1) 24%, rgba(14,12,10,1) 56%, rgba(12,11,9,1) 88%);
+    height: 100vh;
 }
 
 .project_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap items to new rows if they don’t fit */
+    justify-content: space-between; /* Spreads items evenly */
+    gap: 2%; /* Spacing between items */
+    padding: 2%; /* Optional padding */
+    box-sizing: border-box; /* Ensures padding is considered */
 }
 
 .project_item {
-    display: block;
+    flex: 1 1 calc(22% - 2%); /* Automatically adjust width */
     background-color: #3D3B3B;
-    width: 22%;
-    margin: 2%;
-    border: 1px solid;
-    border-color: #DEB768;
+    border: 1px solid #DEB768;
     border-radius: 2%;
-    padding-bottom: 1%;
+    padding: 1%;
+    box-sizing: border-box; /* Includes padding in calculations */
+    text-align: center;
+    height: auto; /* Adjusts height based on content */
 }
 
 .section-title {
     margin: 0;
+    padding-top: 0.5%;
 }
 
 .project_img {
@@ -299,4 +302,11 @@ body {
 .resume ul {
     list-style-type: square;
     padding-left: 20px;
+}
+
+.footer {
+    padding: 20px; /* Adjust for internal spacing */
+    height: auto;  /* Adjusts based on content */
+    min-height: 50px; /* Ensures a baseline height */
+    background-color: #251F33; /* Example: matches your website color */
 }
