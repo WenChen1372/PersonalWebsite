@@ -215,17 +215,20 @@ body {
     display: none;
     position: fixed;
     left: 50%;
-    width: auto;
     top: 50%;
-    height: auto;
+    width: 50vw; /* 50% of viewport width */
+    max-width: 600px; /* Prevents it from being too wide on large screens */
+    height: 60vh; /* 60% of viewport height */
+    max-height: 500px; /* Prevents it from getting too large */
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #13100D;
     border: 1px solid #C9A65E;
     color: #EBFCFB;
-    size: 12px;
+    font-size: 12px;
     text-align: left;
     font-family: 'Lekton', sans-serif;
+    overflow-y: auto; /* Enables scrolling for longer content */
 }
 
 .popup h1 { 
