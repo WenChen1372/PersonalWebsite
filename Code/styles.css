@@ -229,6 +229,7 @@ body {
     text-align: left;
     font-family: 'Lekton', sans-serif;
     overflow-y: auto; /* Enables scrolling for longer content */
+    align-items: center;
 }
 
 .popup h1 { 
@@ -245,6 +246,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+
+.close_button {
+    background-color: #0056b3;
+    border-radius: 5px;
+    font-family: 'Lekton', sans-serif;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 20px auto 0; /* Top margin: 20px, auto centers horizontally */
+    width: fit-content; /* Keeps button size based on content */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.close_button:hover {
+    background-color: #EBFCFB;
+    color: #251F33;
 }
 
 .resume_container {
