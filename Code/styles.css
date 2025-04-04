@@ -122,8 +122,8 @@ body {
     border-color: #EBFCFB;
     object-fit: cover;
     display: block;
-    height: 180%;
-    width: 75%;
+    height: auto;
+    max-width: 100%;
     margin-left: 45%;
     margin-top: 3%;
 }
@@ -219,11 +219,11 @@ body {
     width: 50vw; /* 50% of viewport width */
     max-width: 600px; /* Prevents it from being too wide on large screens */
     height: 60vh; /* 60% of viewport height */
-    max-height: 500px; /* Prevents it from getting too large */
+    max-height: 400px; /* Prevents it from getting too large */
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #13100D;
-    border: 1px solid #C9A65E;
+    background-color: #111111;
+    border: 1px solid #EBFCFB;
     color: #EBFCFB;
     font-size: 12px;
     text-align: left;
@@ -240,6 +240,10 @@ body {
 
 .popup.active {
     display: block;
+}
+
+.project_item:hover {
+    transform: scale(1.05);
 }
 
 .popbutton {
@@ -345,4 +349,133 @@ body {
     height: auto;  /* Adjusts based on content */
     min-height: 50px; /* Ensures a baseline height */
     background-color: #251F33; /* Example: matches your website color */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .list {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .list_item {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .profile_container {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile_picture {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .about_me {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .project_container {
+        grid-template-columns: 1fr; /* Single column for projects */
+        gap: 1rem;
+    }
+
+    .popup {
+        width: 90vw;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .resume {
+        margin: 0 5%;
+        padding: 10px;
+    }
+
+    .download-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .projects {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/* For medium screens (tablets, max-width: 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .list_item {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .profile_container {
+        width: 70%;
+        height: auto;
+    }
+
+    .project_container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for projects */
+    }
+
+    .resume {
+        margin: 0 10%;
+    }
+
+    .projects {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+/* For large screens (desktops, min-width: 1025px) */
+@media (min-width: 1025px) {
+    .navbar {
+        padding: 0 2%;
+    }
+
+    .list_item {
+        margin-right: 35px;
+        font-size: 20px;
+    }
+
+    .profile_container {
+        width: 50%;
+        height: 50%;
+    }
+
+    .project_container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for projects */
+    }
+
+    .resume {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .projects {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
 }
