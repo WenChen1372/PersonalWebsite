@@ -17,15 +17,15 @@
               </div>
         </div>
         <nav class="navbar">
-            <u1 class="list">
+            <div class="navbar-header">
+                <button class="hamburger" onclick="toggleNavbar()">☰</button>
                 <img src="pictures/w.png" class="logo">
-                <li><a class="list_item">Wen Chen</a></li>
-            </u1>
-            <ul class="list">
-                <li><a class="list_item">Home</a></li>
-                <li><a class="list_item">About</a></li>
-                <li><a class="list_item">Projects</a></li>
-                <li><a class="list_item">Contact</a></li>
+            </div>
+            <ul class="list" id="navbar-links">
+                <li><a class="list_item" href="#vanta">Home</a></li>
+                <li><a class="list_item" href="#about">About</a></li>
+                <li><a class="list_item" href="#socials">Socials</a></li>
+                <li><a class="list_item" href="#ppage">Projects</a></li>
             </ul>
         </nav>
         <script>
@@ -39,7 +39,7 @@
                 }
             });
         </script>
-        <div class="profile">
+        <div class="profile" id="about">
             <article class="about_me" data-aos="fade-right">
                 <h1 class="section-title">About Me</h1>
                 <p>
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-        <div class="resume_container">
+        <div class="resume_container" id="socials">
             <section class="resume" data-aos="fade-right">
                 <a href="assets\Wen_s_Resume (12).pdf" class="download-btn"  target="_blank" download>Download Full Resume</a>
                 <h2>Simplified Resume</h2>
@@ -152,7 +152,7 @@
             </article>
         </div>
         
-        <div class="projects"> 
+        <div class="projects" id="ppage"> 
             <h1 class="section-title">Projects</h1>
             <div class="project_container">
                 <div class="project_item">

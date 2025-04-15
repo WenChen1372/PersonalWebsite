@@ -12,11 +12,13 @@ body {
     display: flex;
     font-family: 'Lekton', sans-serif;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures space between logo and links */
     position: fixed;
-    width: 100vw; 
+    width: 100%; /* Use 100% instead of 100vw to avoid horizontal scroll issues */
     top: 0;
     z-index: 10;
+    padding: 0 20px; /* Add padding to prevent content from sticking to the edges */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .navbar.solid-background {
@@ -45,6 +47,7 @@ body {
 .list_item {
     margin-right: 35px;
     font-size: 20px;
+    color: #EBFCFB;
 }
 
 .profile {
@@ -78,19 +81,19 @@ body {
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
   }
-  
+
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
   }
-  
+
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white; }
   }
-  
+
 .profile_container {
     width: 50%;
     height: 50%;
@@ -107,7 +110,7 @@ body {
     align-items: flex-start;
     font-family: 'Lekton', sans-serif;
     color: #EBFCFB;
-    
+
     border-radius: 3%;
     padding: 1rem; /* Space around the text */
     margin: 0; /* Removes extra space */
@@ -122,8 +125,8 @@ body {
     border-color: #EBFCFB;
     object-fit: cover;
     display: block;
-    height: auto;
-    max-width: 100%;
+    height: 180%;
+    width: 75%;
     margin-left: 45%;
     margin-top: 3%;
 }
@@ -166,7 +169,7 @@ body {
 
 /* Individual Project Item */
 .project_item {
-    background-color: #383737;
+    background-color: #171616;
     border: 1px solid #EBFCFB;
     border-radius: 5%;
     padding: 1rem;
@@ -219,10 +222,10 @@ body {
     width: 50vw; /* 50% of viewport width */
     max-width: 600px; /* Prevents it from being too wide on large screens */
     height: 60vh; /* 60% of viewport height */
-    max-height: 400px; /* Prevents it from getting too large */
+    max-height: 500px; /* Prevents it from getting too large */
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #111111;
+    background-color: #0a0a0a;
     border: 1px solid #EBFCFB;
     color: #EBFCFB;
     font-size: 12px;
@@ -240,10 +243,6 @@ body {
 
 .popup.active {
     display: block;
-}
-
-.project_item:hover {
-    transform: scale(1.05);
 }
 
 .popbutton {
@@ -329,16 +328,16 @@ body {
 .download-btn:hover {
     background-color: #004494;
 }
-  
+
 .resume h2, .resume h3, .resume h4 {
     color: #0056b3;
     margin-top: 20px;
 }
-  
+
 .resume p {
     margin: 10px 0;
 }
-  
+
 .resume ul {
     list-style-type: square;
     padding-left: 20px;
@@ -348,29 +347,109 @@ body {
     padding: 20px; /* Adjust for internal spacing */
     height: auto;  /* Adjusts based on content */
     min-height: 50px; /* Ensures a baseline height */
-    background-color: #251F33; /* Example: matches your website color */
+    background-color: #1E1D1D;
+    color: #EBFCFB; /* Example: matches your website color */
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #EBFCFB;
+    cursor: pointer;
+}
+
+#navbar-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 @media (max-width: 768px) {
-    body {
+
+    html, body {
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        margin: 0;
         padding: 0;
+        width: 100%; /* Ensure the body takes up the full width of the viewport */
+    }
+
+    * {
+        box-sizing: border-box; /* Include padding and border in width/height calculations */
+    }
+    
+    
+    /* Fix other sections */
+    .profile, .resume_container, .projects, .popup {
+        width: 100%; /* Ensure sections span the full width */
+        max-width: 100%; /* Prevent sections from exceeding the viewport width */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .logo, .name {
+        display: none; /* Hide logo and "Wen Chen" */
+    }
+
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
     }
 
     .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0%;
+        /* Align items to the left *//* Add padding for better spacing */
+    }
+
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        padding: 0; /* Show hamburger button on mobile */
     }
 
     .list {
         flex-direction: column;
+        align-items: flex-start;
         padding: 0;
     }
 
+    #navbar-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        align-items: center; /* Center the links */
+        width: 100%;
+        background-color: rgba(47, 46, 46, 0.9); /* Ensure background covers links */
+        padding: 10px 0;
+        position: absolute;
+        top: 56px; /* Position below the navbar */
+        left: 0;
+    }
+
+    #navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+
     .list_item {
-        margin-right: 0;
-        margin-bottom: 10px;
-        font-size: 16px;
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center; /* Align text to the left *//* Take full width */
+        padding-left: 0; /* Add padding for better spacing */
+    }
+
+    .profile {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
     }
 
     .profile_container {
@@ -380,15 +459,33 @@ body {
     }
 
     .profile_picture {
-        height: auto;
         width: 100%;
-        margin-left: 0;
-        margin-top: 5%;
+        height: auto;
+        margin: 0;
     }
 
     .about_me {
+        width: 100%;
         max-width: 100%;
-        padding: 1rem;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .resume_container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .resume, .resume_desc {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .projects {
+        margin: 0;
+        padding: 20px;
     }
 
     .project_container {
@@ -396,86 +493,30 @@ body {
         gap: 1rem;
     }
 
+    .project_item {
+        height: auto; /* Allow project items to adjust height */
+        padding: 10px;
+    }
+
+    .project_img {
+        height: auto;
+        max-height: 200px; /* Limit image height */
+    }
+
     .popup {
         width: 90vw;
         height: auto;
         max-height: 80vh;
-    }
-
-    .resume {
-        margin: 0 5%;
         padding: 10px;
     }
 
-    .download-btn {
-        top: 10px;
-        right: 10px;
-        padding: 8px;
+    .close_button {
+        margin: 10px auto;
+        padding: 8px 16px;
     }
 
-    .projects {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-}
-
-/* For medium screens (tablets, max-width: 1024px) */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .list_item {
-        margin-right: 20px;
-        font-size: 18px;
-    }
-
-    .profile_container {
-        width: 70%;
-        height: auto;
-    }
-
-    .project_container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for projects */
-    }
-
-    .resume {
-        margin: 0 10%;
-    }
-
-    .projects {
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
-}
-
-/* For large screens (desktops, min-width: 1025px) */
-@media (min-width: 1025px) {
-    .navbar {
-        padding: 0 2%;
-    }
-
-    .list_item {
-        margin-right: 35px;
-        font-size: 20px;
-    }
-
-    .profile_container {
-        width: 50%;
-        height: 50%;
-    }
-
-    .project_container {
-        grid-template-columns: repeat(3, 1fr); /* Three columns for projects */
-    }
-
-    .resume {
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-    .projects {
-        margin-left: 10rem;
-        margin-right: 10rem;
+    .footer {
+        text-align: center;
+        padding: 10px;
     }
 }
