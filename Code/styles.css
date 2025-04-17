@@ -1,7 +1,5 @@
 body {
     margin: 0rem;
-    padding: 0%;
-    position: relative;
     background-color: #1B1A1A;
 }
 
@@ -367,6 +365,131 @@ body {
     padding: 0;
     margin: 0;
 }
+
+@media (max-width: 1024px) {
+
+    html, body {
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Ensure the body takes up the full width of the viewport */
+    }
+
+    .logo, .name {
+        display: none; /* Hide logo and "Wen Chen" */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #EBFCFB;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 auto; /* Center the hamburger button */
+    }
+
+    #navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-header {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #navbar-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(47, 46, 46, 0.9);
+        padding: 10px 0;
+    }
+
+    .list_item {
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .profile_container {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile_picture {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .about_me {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .resume_container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .resume, .resume_desc {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .projects {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .project_container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for projects */
+        gap: 1rem;
+    }
+
+    .project_item {
+        height: auto;
+        padding: 10px;
+    }
+
+    .project_img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .popup {
+        width: 80vw;
+        height: auto;
+        max-height: 80vh;
+        padding: 10px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+    
+
 
 
 @media (max-width: 768px) {
